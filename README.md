@@ -10,12 +10,12 @@ While every situation will vary, the steps documented below may work, but your m
 Pre-flight check:
 * Back up all VMs and LXCs, validate they are working.
 * Make sure there's at least 5GB of free disk space on the Proxmox host. Use `df -h` to verify
-* Make sure you're running at least Proxmox VE 7.4.13 or later. Run tteck's Proxmox VE post-install script to update Proxmox to the latest 7.4.x version available: `bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"`
+* Make sure you're running at least Proxmox VE 7.4.13 or later. Run tteck's Proxmox VE post-install script to update Proxmox to the latest 7.4.x version available:<br>`bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/post-pve-install.sh)"`
 
 In the Proxmox host's shell:
 1. Run `pve7to8 --full`
 Make note of any WARNINGS and resolve if possible
-2. Automate Proxmox 7.4.x to 8.0 upgrade with tteck's Proxmox 8 upgrade script: `bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/pve8-upgrade.sh)"`<br><br>
+2. Automate Proxmox 7.4.x to 8.0 upgrade with tteck's Proxmox 8 upgrade script: <br>`bash -c "$(wget -qLO - https://github.com/tteck/Proxmox/raw/main/misc/pve8-upgrade.sh)"`<br><br>
     > Skip to Step 2 if you run this automatic script.<br><br>
     > Otherwise, continue onwards manually...
 3. Stop all containers (VM, LXC, Docker, etc)
